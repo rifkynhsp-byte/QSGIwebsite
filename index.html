@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QSGI | Precision • Intelligence • Innovation</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Inter:wght@300;400;700;900&display=swap');
@@ -18,12 +17,6 @@
         .industry-card:hover { background-color: #1e3a8a; transition: all 0.3s ease; }
         .tech-card { transition: all 0.3s ease; }
         .tech-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px -10px rgba(0,0,0,0.1); }
-        .view-section { display: none; animation: fadeIn 0.5s ease-out; }
-        .view-section.active { display: block; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-        .chart-container { position: relative; width: 100%; height: 300px; }
-        .tab-btn.active { background-color: #2563eb; color: white; }
-        .tab-btn:not(.active) { background-color: #e2e8f0; color: #64748b; }
     </style>
 </head>
 <body class="bg-white text-slate-900 selection:bg-blue-500 selection:text-white">
@@ -45,16 +38,16 @@
     <header class="sticky top-0 bg-white/95 backdrop-blur-xl border-b border-slate-100 z-[100]">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-14">
-                <a href="#" onclick="switchView('main'); window.scrollTo(0,0);" class="flex items-center gap-3 group">
+                <a href="index.html" class="flex items-center gap-3 group">
                     <img src="https://i.ibb.co/DPySg11v/QSGIlogo.jpg" alt="QSGI Logo" class="h-10 w-auto">
                     <span class="text-3xl font-black text-blue-950 tracking-tighter italic group-hover:text-blue-800 transition">QSGI</span>
                 </a>
                 <div class="hidden lg:flex space-x-8 font-bold text-[11px] uppercase tracking-widest text-slate-500">
-                    <button onclick="switchView('main'); scrollToSection('about')" class="hover:text-blue-600 transition">About Us</button>
-                    <a href="products.html" class="hover:text-blue-600 transition">Product</a>
-                    <a href="technology.html" class="hover:text-blue-600 transition">Technology</a>
-                    <a href="case_studies.html" class="hover:text-blue-600 transition">Case Study</a>
-                    <a href="contact.html" class="hover:text-blue-600 transition">Contact Us</a>
+                    <a href="#about" class="py-2 hover:text-blue-600 transition">About Us</a>
+                    <a href="products.html" class="py-2 hover:text-blue-600 transition">Product</a>
+                    <a href="technology.html" class="py-2 hover:text-blue-600 transition">Technology</a>
+                    <a href="case_studies.html" class="py-2 hover:text-blue-600 transition">Case Study</a>
+                    <a href="contact.html" class="py-2 hover:text-blue-600 transition">Contact Us</a>
                 </div>
             </div>
             <div class="flex items-center space-x-6">
@@ -63,103 +56,165 @@
         </nav>
     </header>
 
-    <!-- MAIN VIEW -->
-    <main id="view-main" class="view-section active">
-        <!-- HERO -->
-        <section id="home" class="relative h-[85vh] flex items-center bg-slate-950 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=2400" class="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-luminosity" alt="Remote Sensing">
-            <div class="absolute inset-0 hero-gradient"></div>
-            <div class="container mx-auto px-6 relative z-10 text-white">
-                <div class="max-w-5xl">
-                    <span class="text-blue-400 font-bold uppercase tracking-[0.3em] text-xs mb-6 inline-block">Intelligence | Precision | Innovation</span>
-                    <h1 class="text-6xl md:text-8xl font-black leading-[1.1] uppercase tracking-tighter mb-10">Transforming the <br> physical world into <br><span class="text-blue-400 font-light italic lowercase">digital intelligence.</span></h1>
-                    <p class="text-xl md:text-3xl font-light italic text-slate-300 max-w-3xl mb-14">We empower enterprises to navigate the future with Remote Sensing, GIS, and AI-driven analytics.</p>
-                    <div class="flex flex-wrap gap-4">
-                        <a href="products.html" class="bg-blue-600 text-white px-8 py-4 rounded-sm font-black uppercase tracking-widest text-xs hover:bg-blue-500 transition shadow-lg shadow-blue-600/25">Explore Solutions</a>
-                        <a href="technology.html" class="bg-transparent border border-white/20 text-white px-8 py-4 rounded-sm font-bold uppercase tracking-widest text-xs hover:bg-white/5 transition backdrop-blur-sm">View Technical Specs</a>
+    <!-- HERO -->
+    <section id="home" class="relative h-[85vh] flex items-center bg-slate-950 overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=2400" class="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-luminosity" alt="Remote Sensing">
+        <div class="absolute inset-0 hero-gradient"></div>
+        <div class="container mx-auto px-6 relative z-10 text-white">
+            <div class="max-w-5xl">
+                <span class="text-blue-400 font-bold uppercase tracking-[0.3em] text-xs mb-6 inline-block">Intelligence | Precision | Innovation</span>
+                <h1 class="text-6xl md:text-8xl font-black leading-[1.1] uppercase tracking-tighter mb-10">QUANTSPECTRA <br> Intelligence <br><span class="text-blue-400 font-light italic lowercase">digital intelligence.</span></h1>
+                <p class="text-xl md:text-3xl font-light italic text-slate-300 max-w-3xl mb-14">At QSGI, we revolutionize industries with cutting-edge Remote Sensing, GIS, and AI-driven analytics.</p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="products.html" class="bg-blue-600 text-white px-8 py-4 rounded-sm font-black uppercase tracking-widest text-xs hover:bg-blue-500 transition shadow-lg shadow-blue-600/25">Explore Solutions</a>
+                    <a href="technology.html" class="bg-transparent border border-white/20 text-white px-8 py-4 rounded-sm font-bold uppercase tracking-widest text-xs hover:bg-white/5 transition backdrop-blur-sm">View Technical Specs</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SUMMARY -->
+    <section id="about" class="py-24 bg-slate-50">
+        <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center">
+            <div>
+                <h2 class="text-4xl font-black text-blue-900 uppercase tracking-tighter mb-10">Unlock the Power of Location Intelligence</h2>
+                
+                <div class="space-y-8 text-slate-600 text-lg leading-relaxed">
+                    <div class="flex gap-4">
+                        <div class="mt-1"><i class="fa-solid fa-layer-group text-blue-600 text-xl"></i></div>
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Our Expertise</h3>
+                            <p>Hidden patterns emerge when you visualize data on a map. We turn complex capture data—from urban planning to energy—into actionable intelligence.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-4">
+                        <div class="mt-1"><i class="fa-solid fa-bullseye text-blue-600 text-xl"></i></div>
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Our Approach</h3>
+                            <p>We empower leaders to incorporate geospatial data into financial systems. A holistic understanding for Real Estate, Insurance, and Public Policy.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <div class="mt-1"><i class="fa-solid fa-chart-line text-blue-600 text-xl"></i></div>
+                        <div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">Our Results</h3>
+                            <ul class="text-sm font-bold uppercase tracking-wide text-slate-500 space-y-1">
+                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Satellite & Drone Surveys</li>
+                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Geo-database Preparation</li>
+                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Advanced ML Analytics</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-10 border-l-4 border-blue-600 pl-8 text-xl text-slate-700 italic font-light">
+                    "Solving Today’s Challenges for a Better Tomorrow. Trust QSGI for supply chain resilience and sustainable development."
+                </div>
+            </div>
+            <div class="relative group">
+                <div class="absolute -inset-2 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-sm blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80&w=1200" class="relative rounded-sm shadow-2xl" alt="Lidar Data Analysis">
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS / HOW IT WORKS -->
+    <section id="how" class="py-24 bg-white border-t border-slate-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-20">
+                <h2 class="text-4xl font-black text-blue-900 uppercase tracking-tighter mb-6">Transforming Data into Actionable Intelligence</h2>
+                <p class="text-slate-600 text-lg">We streamline geospatial data collection, processing, and sharing with cutting-edge technology.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="group relative rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition duration-500">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?q=80&w=1000" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" alt="Drone">
+                    </div>
+                    <div class="p-8 bg-white relative">
+                        <div class="absolute -top-6 right-8 bg-blue-600 text-white w-12 h-12 flex items-center justify-center rounded-full font-black text-xl shadow-lg">01</div>
+                        <h3 class="text-xl font-black mb-2 text-slate-900 uppercase">Precision Capture</h3>
+                        <p class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-4">Harvesting Insights</p>
+                        <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                            Licensed drone pilots using LiDAR & Thermal sensors. Ultra-high-resolution data with sub-centimeter accuracy uploaded instantly to the cloud.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="group relative rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition duration-500">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" alt="Analytics">
+                    </div>
+                    <div class="p-8 bg-white relative">
+                        <div class="absolute -top-6 right-8 bg-blue-600 text-white w-12 h-12 flex items-center justify-center rounded-full font-black text-xl shadow-lg">02</div>
+                        <h3 class="text-xl font-black mb-2 text-slate-900 uppercase">AI Processing</h3>
+                        <p class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-4">Power of Data</p>
+                        <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                            AI engines convert raw data into orthomosaics, point clouds, and 3D maps. Rigorous multi-level quality checks ensure flawless results.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="group relative rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition duration-500">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000" class="w-full h-full object-cover transition duration-700 group-hover:scale-110" alt="Collaboration">
+                    </div>
+                    <div class="p-8 bg-white relative">
+                        <div class="absolute -top-6 right-8 bg-blue-600 text-white w-12 h-12 flex items-center justify-center rounded-full font-black text-xl shadow-lg">03</div>
+                        <h3 class="text-xl font-black mb-2 text-slate-900 uppercase">Collaboration</h3>
+                        <p class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-4">Democratizing Intel</p>
+                        <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                            A centralized dashboard for stakeholders to analyze and share data. Integrates with ERP, CAD, and GIS tools securely.
+                        </p>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- ABOUT -->
-        <section id="about" class="py-24 bg-slate-50">
-            <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center">
-                <div>
-                    <h2 class="text-4xl font-black text-blue-900 uppercase tracking-tighter mb-10">Who We Are</h2>
-                    <div class="border-l-4 border-blue-600 pl-8 mb-10 text-xl text-slate-700 italic font-light leading-relaxed">"By integrating geospatial data with financial modelling, we offer a spatial-finance framework that revolutionizes decision-making across industries."</div>
-                    <p class="text-slate-600 mb-12 text-lg">At QSGI, we are a team of geospatial experts, urban planners, and technology enthusiasts dedicated to transforming raw data into actionable insights.</p>
-                    <div class="grid md:grid-cols-2 gap-8">
-                        <div class="bg-white p-8 rounded-sm shadow-sm border-t-4 border-blue-900"><h4 class="font-black text-blue-900 uppercase text-xs mb-4 tracking-widest">Vision</h4><p class="text-xs italic text-slate-500 leading-relaxed">Advancing Geo-Data for sustainability: To build a sustainable, intelligent, and trusted geospatial ecosystem.</p></div>
-                        <div class="bg-white p-8 rounded-sm shadow-sm border-t-4 border-blue-900"><h4 class="font-black text-blue-900 uppercase text-xs mb-4 tracking-widest">Mission</h4><p class="text-xs italic text-slate-500 leading-relaxed">Geospatial Excellence for mapping the future: To bridge the gap between technology and real-world challenges.</p></div>
-                    </div>
-                </div>
-                <div class="relative"><img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80&w=1200" class="rounded-sm shadow-2xl" alt="Lidar Data Analysis"></div>
-            </div>
-        </section>
+    <!-- CASE STUDIES PROMO -->
+    <section class="relative py-32 bg-slate-900 text-white overflow-hidden">
+         <!-- Background Image -->
+         <div class="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070')] bg-cover bg-center"></div>
+         <div class="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/80 to-transparent"></div>
+         
+         <div class="container mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center justify-between gap-10">
+             <div class="max-w-2xl">
+                 <span class="text-blue-400 font-bold uppercase tracking-[0.2em] text-xs mb-2 block">Proven Impact</span>
+                 <h2 class="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-6">Real-World Case Studies.</h2>
+                 <p class="text-slate-300 text-lg mb-8 font-light">
+                     See how we are solving critical challenges. From flood resilience in Singh Nagar to precision agriculture in West Godavari and mining safety audits.
+                 </p>
+                 <a href="case_studies.html" class="inline-flex items-center group bg-blue-600 text-white px-8 py-4 rounded-sm font-bold uppercase tracking-widest hover:bg-blue-500 transition gap-3">
+                     View All Case Studies <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition"></i>
+                 </a>
+             </div>
+             <!-- Decorative Graphic -->
+             <div class="hidden md:block w-1/3 opacity-80">
+                 <i class="fa-solid fa-folder-open text-9xl text-blue-500/20 absolute right-10 top-1/2 -translate-y-1/2"></i>
+                 <i class="fa-solid fa-globe text-[15rem] text-slate-500/10 absolute right-0 top-1/2 -translate-y-1/2"></i>
+             </div>
+         </div>
+    </section>
 
-        <!-- DASHBOARD LINK -->
-        <section class="py-20 bg-slate-900 text-white text-center">
-             <h2 class="text-4xl font-black uppercase tracking-tighter mb-6">Explore the Intelligence Hub</h2>
-             <p class="text-slate-400 max-w-2xl mx-auto mb-10">Access our interactive financial modeling tools for Energy, Agriculture, and Urban sectors.</p>
-             <button onclick="switchView('dashboard')" class="bg-blue-600 text-white px-10 py-4 rounded-sm font-bold uppercase tracking-widest hover:bg-blue-500 transition">Launch Dashboard</button>
-        </section>
-
-        <!-- CTA -->
-        <section class="py-24 bg-white text-center">
-            <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-black text-blue-900 uppercase tracking-tighter mb-6">Ready to Innovate?</h2>
-                <p class="text-slate-600 mb-10 max-w-2xl mx-auto">Get a feasibility study for your next geospatial project.</p>
-                <a href="contact.html" class="bg-blue-900 text-white px-10 py-4 rounded-sm font-bold uppercase tracking-widest hover:bg-blue-800 transition">Request Consultation</a>
-            </div>
-        </section>
-    </main>
-
-    <!-- DASHBOARD VIEW (Hidden by default) -->
-    <main id="view-dashboard" class="view-section">
-        <section class="bg-slate-900 text-white py-20">
-            <div class="container mx-auto px-6 text-center">
-                <span class="text-blue-400 font-bold uppercase tracking-[0.2em] text-xs">Applications & Capabilities</span>
-                <h1 class="text-4xl md:text-5xl font-black mt-4 mb-6">The Intelligence Hub.</h1>
-                <div class="mt-8"><button onclick="switchView('main')" class="bg-transparent border border-white/20 text-white px-6 py-2 rounded-sm text-xs font-bold uppercase tracking-widest hover:bg-white/10 transition">&larr; Back to Home</button></div>
-            </div>
-        </section>
-        <section class="py-12 -mt-10 mb-20">
-            <div class="container mx-auto px-6">
-                <div class="flex flex-wrap justify-center gap-4 mb-10 relative z-10">
-                    <button onclick="switchTab('energy')" id="tab-energy" class="tab-btn active px-6 py-3 rounded-full text-sm font-bold uppercase tracking-wide transition shadow-lg">Energy</button>
-                    <button onclick="switchTab('ag')" id="tab-ag" class="tab-btn px-6 py-3 rounded-full text-sm font-bold uppercase tracking-wide transition shadow-lg">Agriculture</button>
-                    <button onclick="switchTab('urban')" id="tab-urban" class="tab-btn px-6 py-3 rounded-full text-sm font-bold uppercase tracking-wide transition shadow-lg">Urban</button>
-                </div>
-                <div class="bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden min-h-[600px]">
-                    <div id="content-energy" class="p-8 lg:p-12 grid lg:grid-cols-2 gap-12"><div><h3 class="text-2xl font-black text-slate-900 mb-2">Thermal Auditing</h3><p class="text-slate-600 mb-8">Automated satellite thermal analysis.</p></div><div class="bg-slate-900 rounded-xl p-8 text-white"><div class="chart-container"><canvas id="energyChart"></canvas></div></div></div>
-                    <div id="content-ag" class="hidden p-8 lg:p-12 grid lg:grid-cols-2 gap-12"><div><h3 class="text-2xl font-black text-slate-900 mb-2">Variable Rate Tech</h3></div><div class="bg-white rounded-xl p-8 border border-slate-100"><div class="chart-container"><canvas id="agChart"></canvas></div></div></div>
-                    <div id="content-urban" class="hidden p-8 lg:p-12 grid lg:grid-cols-2 gap-12"><div><h3 class="text-2xl font-black text-slate-900 mb-2">Predictive Planning</h3></div><div class="bg-slate-900 rounded-xl p-8 text-white"><div class="chart-container"><canvas id="urbanChart"></canvas></div></div></div>
-                </div>
-            </div>
-        </section>
-    </main>
+    <!-- CTA -->
+    <section class="py-24 bg-white text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-black text-blue-900 uppercase tracking-tighter mb-6">Ready to Innovate?</h2>
+            <p class="text-slate-600 mb-10 max-w-2xl mx-auto">Get a feasibility study for your next geospatial project.</p>
+            <a href="contact.html" class="bg-blue-900 text-white px-10 py-4 rounded-sm font-bold uppercase tracking-widest hover:bg-blue-800 transition shadow-lg hover:shadow-xl">Request Consultation</a>
+        </div>
+    </section>
 
     <!-- FOOTER -->
     <footer class="bg-slate-950 text-slate-500 py-20 px-6 border-t border-white/5 text-center">
         <p>&copy; 2025 QSGI INTEL SOLUTIONS. ALL RIGHTS RESERVED.</p>
     </footer>
 
-    <script>
-        function switchView(viewId) {
-            document.querySelectorAll('.view-section').forEach(el => el.classList.remove('active'));
-            document.getElementById('view-' + viewId).classList.add('active');
-            window.scrollTo(0,0);
-            if (viewId === 'dashboard') { setTimeout(() => { Object.values(charts).forEach(c => c.resize()); }, 100); }
-        }
-        function scrollToSection(id) { const el = document.getElementById(id); if (el) el.scrollIntoView({ behavior: 'smooth' }); }
-        function switchTab(id) { ['energy','ag','urban'].forEach(t => { document.getElementById('content-'+t).classList.add('hidden'); document.getElementById('tab-'+t).classList.remove('active'); }); document.getElementById('content-'+id).classList.remove('hidden'); document.getElementById('tab-'+id).classList.add('active'); }
-        let charts = {};
-        window.addEventListener('load', () => {
-            charts.energy = new Chart(document.getElementById('energyChart'), { type: 'bar', data: { labels: ['Optimized', 'Current'], datasets: [{ data: [500, 1950], backgroundColor: ['#10b981', '#ef4444'] }] }, options: { plugins: { legend: { display: false } }, maintainAspectRatio: false } });
-            charts.ag = new Chart(document.getElementById('agChart'), { type: 'doughnut', data: { labels: ['Stressed', 'Healthy'], datasets: [{ data: [45, 55], backgroundColor: ['#ef4444', '#10b981'] }] }, options: { maintainAspectRatio: false } });
-            charts.urban = new Chart(document.getElementById('urbanChart'), { type: 'line', data: { labels: ['Mon','Tue','Wed','Thu','Fri'], datasets: [{ label: 'Prediction', data: [120,190,150,220,300], borderColor: '#3b82f6' }] }, options: { plugins: { legend: { display: false } }, maintainAspectRatio: false } });
-        });
-    </script>
 </body>
 </html>
