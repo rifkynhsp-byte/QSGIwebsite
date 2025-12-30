@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QSGI | Smart Paddy Intelligence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600;700;900&family=JetBrains+Mono:wght@400;700&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #ffffff; }
+        h1, h2, h3, h4, h5 { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        .hero-gradient { background: linear-gradient(0deg, rgba(15,23,42,1) 0%, rgba(15,23,42,0.6) 100%); }
+    </style>
+</head>
+<body class="bg-white text-slate-900 antialiased">
+
+    <!-- NAVIGATION -->
+    <header class="sticky top-0 bg-white/95 backdrop-blur-xl border-b border-slate-100 z-[100]">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <img src="https://i.ibb.co/DPySg11v/QSGIlogo.jpg" alt="QSGI Logo" class="h-10 w-auto">
+                <span class="text-3xl font-black text-blue-950 tracking-tighter italic group-hover:text-blue-800 transition">QSGI</span>
+            </a>
+            <div class="hidden lg:flex space-x-8 font-bold text-[11px] uppercase tracking-widest text-slate-500">
+                <a href="index.html#about" class="py-2 hover:text-blue-600 transition">About Us</a>
+                <a href="products.html" class="py-2 hover:text-blue-600 transition">Product</a>
+                <a href="technology.html" class="py-2 hover:text-blue-600 transition">Technology</a>
+                <a href="case_studies.html" class="py-2 text-blue-600 border-b-2 border-blue-600 transition">Case Study</a>
+                <a href="contact.html" class="py-2 hover:text-blue-600 transition">Contact Us</a>
+            </div>
+            <a href="contact.html" class="bg-blue-900 text-white px-7 py-2.5 rounded-sm text-[11px] font-black uppercase tracking-widest hover:bg-blue-800 transition shadow-lg shadow-blue-900/20">Contact Us</a>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative min-h-[85vh] py-32 flex items-center bg-slate-950 overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-40 bg-cover bg-center" style="background-image: url('https://i.ibb.co/3m2YtnWY/RIcefieldindia-Sentinel-RGB.png');"></div>
+        <div class="absolute inset-0 hero-gradient z-0"></div>
+        
+        <div class="container mx-auto px-6 relative z-10 text-white">
+            <div class="max-w-5xl">
+                <span class="text-emerald-400 font-bold uppercase tracking-[0.3em] text-xs mb-6 inline-block">
+                    Precision Agriculture | West Godavari
+                </span>
+                <h1 class="text-6xl md:text-8xl font-black leading-[1.1] uppercase tracking-tighter mb-10">
+                    Smart Paddy <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-green-300 font-light italic lowercase">Yield Maximization.</span>
+                </h1>
+                <p class="text-xl md:text-3xl font-light italic text-slate-300 max-w-3xl mb-14">
+                    Identifying yield gaps in India's highest productivity district using Sentinel-2 AI models to drive 1287% ROI on fertilizer inputs.
+                </p>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-white/20 pt-8">
+                    <div><div class="text-slate-400 text-[10px] font-bold uppercase tracking-widest mb-2">Location</div><div class="font-mono text-xl md:text-2xl">West Godavari</div></div>
+                    <div><div class="text-slate-400 text-[10px] font-bold uppercase tracking-widest mb-2">Total Area</div><div class="font-mono text-xl md:text-2xl text-slate-200">4,657 ha</div></div>
+                    <div><div class="text-slate-400 text-[10px] font-bold uppercase tracking-widest mb-2">Yield Gap</div><div class="font-mono text-xl md:text-2xl text-red-400">1.6 t/ha</div></div>
+                    <div><div class="text-slate-400 text-[10px] font-bold uppercase tracking-widest mb-2">Potential ROI</div><div class="font-mono text-xl md:text-2xl text-emerald-400">1287%</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- METHODOLOGY: MAPPING -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-4xl font-black text-blue-900 uppercase tracking-tighter mb-4">Precision Mapping</h2>
+                <p class="text-slate-600">Our first step was to delineate the exact cultivation boundaries using Dynamic World fusion, filtering out non-arable land to ensure accurate chemical application planning.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="group relative rounded-sm overflow-hidden shadow-lg border border-slate-200">
+                    <div class="absolute top-0 left-0 bg-blue-900 text-white px-3 py-1 text-[10px] font-bold uppercase tracking-widest z-10">01. Land Cover Analysis</div>
+                    <img src="https://i.ibb.co/kszCrsmp/kandcoverdistribution-AOI.png" class="w-full object-cover transition duration-500 group-hover:scale-105">
+                </div>
+                <div>
+                    <div class="group relative rounded-sm overflow-hidden shadow-lg border border-slate-200 mb-6">
+                        <div class="absolute top-0 left-0 bg-emerald-600 text-white px-3 py-1 text-[10px] font-bold uppercase tracking-widest z-10">02. Paddy Mask (AI)</div>
+                        <img src="https://i.ibb.co/39KMkTzZ/Detected-RIcefieldmask-AI.png" class="w-full object-cover transition duration-500 group-hover:scale-105">
+                    </div>
+                    <p class="text-sm text-slate-600 italic">By isolating the active rice paddies (Cyan) from other crops and built-up areas, we established a precise arable area of <strong>4,657.53 Hectares</strong> for variable rate analysis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- YIELD GAP ANALYSIS -->
+    <section class="py-24 bg-slate-50 border-y border-slate-200">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-start">
+                
+                <!-- Narrative -->
+                <div class="md:w-1/3 sticky top-24">
+                    <h3 class="text-3xl font-black text-blue-900 uppercase tracking-tighter mb-6">Identifying the Yield Gap</h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed text-sm">
+                        Using historical Sentinel-2 data, we benchmarked the farm's performance against the regional top 5% producers.
+                    </p>
+                    <ul class="text-sm text-slate-600 space-y-3 mb-8">
+                        <li><strong>Current Avg Yield:</strong> 4.2 t/ha</li>
+                        <li><strong>Regional Potential:</strong> 5.8 t/ha</li>
+                        <li class="text-red-500 font-bold">Yield Gap: 1.6 t/ha</li>
+                    </ul>
+                    <div class="bg-red-50 border border-red-100 p-4 rounded mb-6">
+                        <span class="text-[10px] font-bold uppercase text-red-800 tracking-widest block mb-1">Problem Areas Detected</span>
+                        <div class="flex justify-between items-center text-xs text-red-600 font-mono mt-2">
+                            <span>Blank Spots</span>
+                            <span class="font-bold">900.42 ha (19.3%)</span>
+                        </div>
+                        <div class="flex justify-between items-center text-xs text-orange-600 font-mono mt-1">
+                            <span>Water Stress</span>
+                            <span class="font-bold">1182.10 ha (25.4%)</span>
+                        </div>
+                    </div>
+                    <img src="https://i.ibb.co/MySXLhDJ/Detected-Blankspot-and-problematic-area.png" class="w-full rounded shadow border border-slate-200" alt="Problem Detection">
+                </div>
+
+                <!-- Visuals -->
+                <div class="md:w-2/3 space-y-12">
+                    
+                    <!-- Productivity Map -->
+                    <div>
+                        <div class="flex justify-between items-end mb-2">
+                            <h4 class="font-bold text-blue-900 text-sm uppercase tracking-widest">1. Productivity Heatmap (EVI)</h4>
+                            <span class="text-[10px] font-mono text-slate-400">SENTINEL-2 TIME SERIES</span>
+                        </div>
+                        <img src="https://i.ibb.co/7d7Ty2RT/Yieldheatmapproductivity-AI.png" alt="Yield Heatmap" class="w-full rounded shadow-lg border border-slate-100">
+                        <p class="text-[10px] text-slate-400 mt-2 italic">Dark Green indicates high yield (>5.9t), while Red indicates critical underperformance (<3.3t).</p>
+                    </div>
+
+                    <!-- Zoning Map -->
+                    <div>
+                        <div class="flex justify-between items-end mb-2">
+                            <h4 class="font-bold text-emerald-700 text-sm uppercase tracking-widest">2. Variable Rate Zoning</h4>
+                            <span class="text-[10px] font-mono text-emerald-600">ACTIONABLE ZONES</span>
+                        </div>
+                        <img src="https://i.ibb.co/RGpJ3x8H/Yield-Productivity-Zone-AI.png" alt="Zoning" class="w-full rounded shadow-lg border border-slate-100">
+                        <p class="text-[10px] text-slate-400 mt-2 italic">Farms are segmented into Low (Red), Medium (Orange), and High (Green) zones for precise fertilizer allocation.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROI & ECONOMICS -->
+    <section class="py-20 bg-slate-900 text-white">
+        <div class="container mx-auto px-6">
+            <h3 class="text-center text-3xl font-black uppercase tracking-tighter mb-12">Economic Impact Analysis</h3>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
+                <!-- Table -->
+                <div class="bg-white text-slate-900 rounded-sm p-8">
+                    <h4 class="font-bold text-blue-900 uppercase text-xs tracking-widest mb-6">Variable Rate Prescription</h4>
+                    <table class="w-full text-xs font-mono text-left mb-6">
+                        <thead>
+                            <tr class="border-b border-slate-200 text-slate-500">
+                                <th class="py-2">Zone</th>
+                                <th class="py-2">Range (t)</th>
+                                <th class="py-2">Area (ha)</th>
+                                <th class="py-2 text-right">Current Val</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100">
+                            <tr><td class="py-3 font-bold text-red-500">● Low</td><td>< 3.3</td><td>1531.00</td><td class="text-right">₹7,178 L</td></tr>
+                            <tr><td class="py-3 font-bold text-orange-400">● Med</td><td>3.3-5.9</td><td>1545.21</td><td class="text-right">₹45,551 L</td></tr>
+                            <tr><td class="py-3 font-bold text-emerald-500">● High</td><td>> 5.9</td><td>1581.32</td><td class="text-right">₹65,411 L</td></tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="bg-slate-50 p-4 rounded border border-slate-100">
+                        <h5 class="font-bold text-xs uppercase mb-3 text-slate-500">Recommended Inputs (Bags)</h5>
+                        <div class="flex gap-4 text-center">
+                            <div class="flex-1 bg-white p-2 rounded border border-blue-200"><div class="text-blue-600 font-black text-lg">6,496</div><div class="text-[10px] text-slate-400 uppercase">Urea</div></div>
+                            <div class="flex-1 bg-white p-2 rounded border border-orange-200"><div class="text-orange-500 font-black text-lg">1,621</div><div class="text-[10px] text-slate-400 uppercase">DAP</div></div>
+                            <div class="flex-1 bg-white p-2 rounded border border-green-200"><div class="text-emerald-600 font-black text-lg">4,969</div><div class="text-[10px] text-slate-400 uppercase">MOP</div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ROI Text -->
+                <div class="space-y-8">
+                    <div>
+                        <h4 class="text-emerald-400 font-bold uppercase text-sm tracking-widest mb-2">The ROI Case</h4>
+                        <div class="grid grid-cols-2 gap-y-4 text-sm font-mono border-t border-white/10 pt-4">
+                            <div class="text-slate-400">Current Revenue</div>
+                            <div class="text-right font-bold">₹ 4,499.17 L</div>
+                            
+                            <div class="text-slate-400">Potential Revenue</div>
+                            <div class="text-right font-bold text-emerald-400">₹ 6,213.14 L</div>
+                            
+                            <div class="text-slate-400">Fertilizer Cost</div>
+                            <div class="text-right text-red-400">₹ 123.60 L</div>
+                            
+                            <div class="col-span-2 border-t border-white/10 pt-2 mt-2 flex justify-between items-center">
+                                <span class="font-bold text-white uppercase">Net Profit (10% Capture)</span>
+                                <span class="text-2xl font-black text-emerald-400">₹ 1,590 L</span>
+                            </div>
+                        </div>
+                        <p class="text-slate-400 text-xs mt-4 italic">*Assuming only 10% of the yield gap is closed via fertilizer optimization, the ROI on input cost remains over 1000% due to the high value of the crop.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 text-slate-500 py-10 text-center border-t border-white/5 text-xs">
+        <p>&copy; 2025 QSGI INTEL SOLUTIONS. ALL RIGHTS RESERVED.</p>
+    </footer>
+
+</body>
+</html>

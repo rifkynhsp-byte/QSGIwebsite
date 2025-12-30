@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QSGI | Singh Nagar Case Study</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600;700;900&family=JetBrains+Mono:wght@400;700&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #ffffff; }
+        h1, h2, h3, h4, h5 { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        .hero-gradient { background: linear-gradient(0deg, rgba(15,23,42,1) 0%, rgba(15,23,42,0.6) 100%); }
+    </style>
+</head>
+<body class="bg-white text-slate-900 antialiased">
+
+    <!-- NAVIGATION -->
+    <header class="sticky top-0 bg-white/95 backdrop-blur-xl border-b border-slate-100 z-[100]">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <img src="https://i.ibb.co/DPySg11v/QSGIlogo.jpg" alt="QSGI Logo" class="h-10 w-auto">
+                <span class="text-3xl font-black text-blue-950 tracking-tighter italic group-hover:text-blue-800 transition">QSGI</span>
+            </a>
+            <div class="hidden lg:flex space-x-8 font-bold text-[11px] uppercase tracking-widest text-slate-500">
+                <a href="index.html#about" class="py-2 hover:text-blue-600 transition">About Us</a>
+                <a href="products.html" class="py-2 hover:text-blue-600 transition">Product</a>
+                <a href="technology.html" class="py-2 hover:text-blue-600 transition">Technology</a>
+                <a href="case_studies.html" class="py-2 text-blue-600 border-b-2 border-blue-600 transition">Case Study</a>
+                <a href="contact.html" class="py-2 hover:text-blue-600 transition">Contact Us</a>
+            </div>
+            <a href="contact.html" class="bg-blue-900 text-white px-7 py-2.5 rounded-sm text-[11px] font-black uppercase tracking-widest hover:bg-blue-800 transition shadow-lg shadow-blue-900/20">Contact Us</a>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION (Fixed Height Issue) -->
+    <section class="relative min-h-[85vh] py-32 flex items-center bg-slate-950 overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-40 bg-cover bg-center" style="background-image: url('https://i.ibb.co/8LrRjDnH/UAVflood-Extent-RGB.jpg');"></div>
+        <div class="absolute inset-0 hero-gradient z-0"></div>
+        
+        <div class="container mx-auto px-6 relative z-10 text-white">
+            <div class="max-w-5xl">
+                <span class="text-blue-400 font-bold uppercase tracking-[0.3em] text-xs mb-6 inline-block">
+                    Hydrometeorology | Disaster Management
+                </span>
+                <h1 class="text-6xl md:text-8xl font-black leading-[1.1] uppercase tracking-tighter mb-10">
+                    Singh Nagar <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400 font-light italic lowercase">Resilience Pilot 2024.</span>
+                </h1>
+                <p class="text-xl md:text-3xl font-light italic text-slate-300 max-w-3xl mb-14">
+                    Quantifying financial risk through Digital Twin modeling. Integrating Satellite regression with UAV ground-truth validation.
+                </p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-white/20 pt-8">
+                    <div><div class="text-slate-400 text-[10px] font-bold uppercase tracking-widest mb-2">Event Date</div><div class="font-mono text-xl md:text-2xl">Sept 2024</div></div>
+                    <div><div class="text-slate-400 text-[10px] font-bold uppercase tracking-widest mb-2">Impacted Pop</div><div class="font-mono text-xl md:text-2xl text-red-400">~19,080</div></div>
+                    <div><div class="text-slate-400 text-[10px] font-bold uppercase tracking-widest mb-2">Est. Loss</div><div class="font-mono text-xl md:text-2xl text-red-400">₹1,002 Cr</div></div>
+                    <div><div class="text-slate-400 text-[10px] font-bold uppercase tracking-widest mb-2">Data Source</div><div class="font-mono text-xl md:text-2xl text-blue-400">UAV + SAR</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- METHODOLOGY: UAV vs ML SIDE BY SIDE -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-4xl font-black text-blue-900 uppercase tracking-tighter mb-6">Data Ingestion & Ground Truth</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <p class="text-slate-600 text-lg">
+                    We utilize <strong>Sentinel-1 SAR</strong> for broad-scale temporal regression, calibrated against high-resolution <strong>UAV Photogrammetry</strong> (Ground Truth). The classification below strictly utilizes UAV data.
+                </p>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-8">
+                <div class="group relative rounded-sm overflow-hidden shadow-2xl border border-slate-100">
+                    <div class="absolute top-0 left-0 bg-blue-900 text-white px-4 py-2 text-[10px] font-bold uppercase tracking-widest z-10">Input: UAV RGB Mosaic</div>
+                    <img src="https://i.ibb.co/8LrRjDnH/UAVflood-Extent-RGB.jpg" alt="UAV Flood Extent" class="w-full h-auto object-cover transition duration-700 group-hover:scale-105">
+                </div>
+                <div class="group relative rounded-sm overflow-hidden shadow-2xl border border-slate-100">
+                    <div class="absolute top-0 left-0 bg-emerald-700 text-white px-4 py-2 text-[10px] font-bold uppercase tracking-widest z-10">Output: ML Classification (Ground Truth)</div>
+                    <img src="https://i.ibb.co/23fZYrTh/UAVfloodextent-Classify.png" alt="Classification" class="w-full h-auto object-cover transition duration-700 group-hover:scale-105">
+                </div>
+            </div>
+            <p class="text-center text-xs text-slate-400 mt-6 italic">Fig 1.1: Direct comparison of raw UAV imagery (Left) vs. Classified Flood Extent (Right).</p>
+        </div>
+    </section>
+
+    <!-- SCENARIO MODELING -->
+    <section class="py-24 bg-slate-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-black text-blue-900 uppercase tracking-tighter mb-12 text-center">Scenario Modeling: PMF Analysis</h2>
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-white p-6 rounded-sm shadow-sm border border-slate-200 hover:-translate-y-1 transition duration-300">
+                    <h4 class="font-bold text-blue-900 mb-4 uppercase text-[11px] tracking-[0.2em]">01. Current Extent (2024)</h4>
+                    <div class="aspect-square bg-slate-100 mb-4 overflow-hidden relative">
+                        <img src="https://i.ibb.co/0jhvW65H/Current-Flood-Extent.png" class="object-cover w-full h-full">
+                        <div class="absolute bottom-2 right-2 bg-slate-900/80 text-white px-2 py-1 text-xs font-mono">549.0 Ha</div>
+                    </div>
+                    <div class="flex justify-between text-xs border-t pt-3">
+                        <span class="text-slate-500 font-bold uppercase">Financial Loss</span><span class="font-mono font-bold text-slate-900">₹1,002 Cr</span>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-sm shadow-lg border-2 border-red-100 hover:-translate-y-1 transition duration-300 relative">
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-red-600 text-white px-3 py-1 text-[10px] font-bold uppercase tracking-widest shadow-lg">High Risk</div>
+                    <h4 class="font-bold text-red-600 mb-4 uppercase text-[11px] tracking-[0.2em]">02. PMF Simulation</h4>
+                    <div class="aspect-square bg-slate-100 mb-4 overflow-hidden relative">
+                        <img src="https://i.ibb.co/LhsGjqM6/PMFsimulated-Extent.png" class="object-cover w-full h-full">
+                        <div class="absolute bottom-2 right-2 bg-red-600/90 text-white px-2 py-1 text-xs font-mono">893.9 Ha</div>
+                    </div>
+                    <div class="flex justify-between text-xs border-t pt-3">
+                        <span class="text-slate-500 font-bold uppercase">Financial Loss</span><span class="font-mono font-bold text-red-600">₹2,914 Cr</span>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-sm shadow-sm border border-slate-200 hover:-translate-y-1 transition duration-300">
+                    <h4 class="font-bold text-blue-900 mb-4 uppercase text-[11px] tracking-[0.2em]">03. Hydraulic Depth</h4>
+                    <div class="aspect-square bg-slate-100 mb-4 overflow-hidden relative">
+                        <img src="https://i.ibb.co/yFdp0wgp/PMFflooddepth.png" class="object-cover w-full h-full">
+                        <div class="absolute bottom-2 right-2 bg-blue-600/80 text-white px-2 py-1 text-xs font-mono">Max 4.0m</div>
+                    </div>
+                    <div class="flex justify-between text-xs border-t pt-3">
+                        <span class="text-slate-500 font-bold uppercase">Affected Pop</span><span class="font-mono font-bold text-slate-900">55,503</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Impact Matrix -->
+            <div class="max-w-5xl mx-auto bg-white shadow-xl border border-slate-200 rounded-sm overflow-hidden">
+                <div class="px-8 py-5 border-b border-slate-100 bg-slate-50 flex justify-between items-center">
+                    <h4 class="font-bold text-blue-900 uppercase text-[12px] tracking-[0.2em]">Scenario Impact Matrix</h4>
+                    <span class="text-[10px] font-mono text-slate-400">SOURCE: QSGI SOCIO-ECON ENGINE V22.0</span>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm text-left">
+                        <thead class="bg-white text-slate-500 font-bold uppercase text-[10px] tracking-widest border-b border-slate-100">
+                            <tr><th class="px-8 py-4">Metric</th><th class="px-8 py-4">Current (2024)</th><th class="px-8 py-4 text-red-600">PMF (Extreme)</th><th class="px-8 py-4 text-emerald-600">Mitigated</th><th class="px-8 py-4 bg-slate-50">Delta</th></tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-50 font-mono text-xs">
+                            <tr><td class="px-8 py-4 font-sans font-bold text-slate-700">Flood Extent</td><td class="px-8 py-4">549.0 Ha</td><td class="px-8 py-4 font-bold">893.9 Ha</td><td class="px-8 py-4 text-emerald-700">791.8 Ha</td><td class="px-8 py-4 text-emerald-600 bg-slate-50">-102.1 Ha</td></tr>
+                            <tr><td class="px-8 py-4 font-sans font-bold text-slate-700">Population</td><td class="px-8 py-4">19,080</td><td class="px-8 py-4 font-bold">55,503</td><td class="px-8 py-4 text-emerald-700">42,699</td><td class="px-8 py-4 text-emerald-600 bg-slate-50">~12,804</td></tr>
+                            <tr class="bg-blue-50/20"><td class="px-8 py-4 font-sans font-black text-blue-900">TOTAL LOSS</td><td class="px-8 py-4 font-bold text-slate-700">₹1,002.35 Cr</td><td class="px-8 py-4 font-black text-red-600">₹2,914.58 Cr</td><td class="px-8 py-4 font-bold text-emerald-700">₹2,242.35 Cr</td><td class="px-8 py-4 font-black text-emerald-600 bg-blue-50">₹672.23 Cr</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LAND COVER -->
+    <section class="py-24 bg-white border-t border-slate-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-black text-blue-900 uppercase tracking-tighter mb-12 text-center">Baseline Land Cover</h2>
+            <div class="grid lg:grid-cols-3 gap-12 items-center">
+                <div class="lg:col-span-2">
+                    <img src="https://i.ibb.co/nMCvtG0y/landcover-baseline.png" alt="Land Cover Baseline" class="rounded-sm shadow-xl border border-slate-200 w-full h-auto">
+                    <p class="text-[10px] uppercase tracking-widest text-slate-400 mt-2 text-center">Fig 2.1: Sentinel-2 10m Land Cover Baseline</p>
+                </div>
+                <div>
+                    <div class="bg-slate-50 p-8 rounded-sm border border-slate-100 h-full flex flex-col justify-center">
+                        <h4 class="font-bold text-blue-900 uppercase text-[12px] tracking-[0.2em] mb-6 text-center">Composition</h4>
+                        <img src="https://i.ibb.co/9mnrx9nC/landcovercomposition.png" alt="Pie Chart" class="w-full h-auto drop-shadow-lg mb-6">
+                        <p class="text-sm text-slate-600 leading-relaxed italic text-center">"Impermeable surface dominance accelerates runoff velocity."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERVENTION -->
+    <section class="py-24 bg-slate-950 text-white relative overflow-hidden">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center max-w-4xl mx-auto mb-20">
+                <h2 class="text-4xl font-black uppercase tracking-tighter mb-6">Strategic Intervention</h2>
+                <p class="text-slate-400 text-lg">Proposed two-pronged strategy: Retention Basins and targeted Relocation.</p>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-16">
+                <div>
+                    <div class="flex justify-between items-end mb-4 border-b border-white/10 pb-2"><h3 class="text-xl font-bold text-blue-400">Retention & Relocation</h3><span class="text-[10px] font-mono text-emerald-400">BASIN CAP: 0.35 MCM</span></div>
+                    <img src="https://i.ibb.co/7dB4kjH9/relocationandbasinhigh-Res.png" alt="Retention" class="rounded-sm shadow-2xl border border-white/20 w-full opacity-90 hover:opacity-100 transition">
+                </div>
+                <div>
+                    <div class="flex justify-between items-end mb-4 border-b border-white/10 pb-2"><h3 class="text-xl font-bold text-red-400">Risk Matrix (MCDA)</h3><span class="text-[10px] font-mono text-red-400">HIGH RISK: 174.2 HA</span></div>
+                    <img src="https://i.ibb.co/7xWsZ3Mj/Risk-Matrix-high-res.png" alt="Risk Matrix" class="rounded-sm shadow-2xl border border-white/20 w-full opacity-90 hover:opacity-100 transition">
+                </div>
+            </div>
+            <div class="mt-16 bg-blue-900/20 border border-blue-500/30 p-10 rounded-sm max-w-3xl mx-auto backdrop-blur-sm">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                    <div><h4 class="font-bold text-white uppercase text-sm tracking-widest mb-2">Net Project Benefit</h4><p class="text-blue-200 text-xs max-w-sm">Avoided PMF losses minus project costs.</p></div>
+                    <div class="text-right"><div class="text-5xl font-black text-emerald-400 tracking-tight">₹663.48 Cr</div><div class="text-[10px] font-bold text-emerald-600 uppercase tracking-widest mt-1">Estimated ROI</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ASSUMPTIONS & METHODOLOGY -->
+    <section class="py-16 bg-slate-900 border-t border-white/5">
+        <div class="container mx-auto px-6">
+            <h4 class="text-white font-bold uppercase text-[12px] tracking-[0.2em] mb-6">Assumptions & Methodology</h4>
+            <div class="grid md:grid-cols-2 gap-10 text-[11px] leading-relaxed text-slate-500 font-mono">
+                <div>
+                    <p class="mb-4"><strong class="text-slate-300">1. Hydraulic Parameters:</strong> Consistent basin depth of 4.0m. CN derived from Dynamic World.</p>
+                    <p><strong class="text-slate-300">2. Financial Estimates:</strong> Excavation: ₹250/m³. Urban Land: ₹15,000/m². Agri Loss: ₹85,000/Ha.</p>
+                </div>
+                <div>
+                    <p class="mb-4"><strong class="text-slate-300">3. Population:</strong> 35 sq.m per person. 0.15 Vulnerability ratio.</p>
+                    <p><strong class="text-slate-300">4. Data Sources:</strong> CHIRPS (Rain), UAV DSM (0.5m), Copernicus DEM (30m).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OTHER CASE STUDIES NAV -->
+    <section class="py-12 bg-slate-50 border-t border-slate-200">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Next Case Study</span>
+            <a href="case_study_agriculture.html" class="flex items-center gap-4 group">
+                <div class="text-right">
+                    <div class="text-xs font-black text-blue-900 uppercase">Precision Agriculture</div>
+                    <div class="text-[10px] text-slate-500">Variable Rate Technology</div>
+                </div>
+                <div class="bg-blue-600 text-white w-10 h-10 flex items-center justify-center rounded-full group-hover:bg-blue-500 transition"><i class="fa-solid fa-arrow-right"></i></div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-slate-950 text-slate-600 py-10 text-center border-t border-white/5 text-xs">
+        <p>&copy; 2025 QSGI INTEL SOLUTIONS. ALL RIGHTS RESERVED.</p>
+    </footer>
+</body>
+</html>

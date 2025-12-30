@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QSGI | Technology & Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600;700;900&family=JetBrains+Mono:wght@400;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4 { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .tab-btn.active { background-color: #2563eb; color: white; box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3); }
+        .tab-btn:not(.active) { background-color: #f1f5f9; color: #64748b; }
+        .tab-btn:not(.active):hover { background-color: #e2e8f0; color: #334155; }
+        .hero-gradient { background: linear-gradient(0deg, rgba(15,23,42,1) 0%, rgba(15,23,42,0.6) 100%); }
+    </style>
+</head>
+<body class="bg-white text-slate-900 antialiased">
+
+    <!-- NAVIGATION -->
+    <header class="sticky top-0 bg-white/95 backdrop-blur-xl border-b border-slate-100 z-[100]">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <img src="https://i.ibb.co/DPySg11v/QSGIlogo.jpg" alt="QSGI Logo" class="h-10 w-auto">
+                <span class="text-3xl font-black text-blue-950 tracking-tighter italic group-hover:text-blue-800 transition">QSGI</span>
+            </a>
+            <div class="hidden lg:flex space-x-8 font-bold text-[11px] uppercase tracking-widest text-slate-500">
+                <a href="index.html#about" class="py-2 hover:text-blue-600 transition">About Us</a>
+                <a href="products.html" class="py-2 hover:text-blue-600 transition">Product</a>
+                <a href="technology.html" class="py-2 text-blue-600 border-b-2 border-blue-600 transition">Technology</a>
+                <a href="case_studies.html" class="py-2 hover:text-blue-600 transition">Case Study</a>
+                <a href="contact.html" class="py-2 hover:text-blue-600 transition">Contact Us</a>
+            </div>
+            <a href="contact.html" class="bg-blue-900 text-white px-7 py-2.5 rounded-sm text-[11px] font-black uppercase tracking-widest hover:bg-blue-800 transition shadow-lg shadow-blue-900/20">Contact Us</a>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="relative py-24 bg-slate-950 text-white overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070')] bg-cover bg-center"></div>
+        <div class="absolute inset-0 hero-gradient z-0"></div>
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <span class="text-blue-400 font-bold uppercase tracking-[0.3em] text-xs mb-4 inline-block">Our Services</span>
+            <h1 class="text-5xl md:text-6xl font-black uppercase tracking-tighter mb-6">Cutting-Edge <br> Geospatial Tech.</h1>
+            <p class="text-slate-400 max-w-2xl mx-auto text-lg font-light">From discrete return LiDAR to cloud-native GIS analytics, we provide the full stack of spatial intelligence.</p>
+        </div>
+    </section>
+
+    <!-- SERVICES TABS -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-6">
+            
+            <!-- Tab Navigation -->
+            <div class="flex flex-wrap justify-center gap-4 mb-16">
+                <button onclick="switchTab('lidar')" id="tab-lidar" class="tab-btn active px-6 py-3 rounded-full text-xs font-bold uppercase tracking-wide transition">Aerial LiDAR</button>
+                <button onclick="switchTab('drone')" id="tab-drone" class="tab-btn px-6 py-3 rounded-full text-xs font-bold uppercase tracking-wide transition">Drone & Photo</button>
+                <button onclick="switchTab('gis')" id="tab-gis" class="tab-btn px-6 py-3 rounded-full text-xs font-bold uppercase tracking-wide transition">GIS Processing</button>
+                <button onclick="switchTab('analytics')" id="tab-analytics" class="tab-btn px-6 py-3 rounded-full text-xs font-bold uppercase tracking-wide transition">Advanced Analytics</button>
+            </div>
+
+            <div class="min-h-[500px]">
+                
+                <!-- 1. Aerial LiDAR -->
+                <div id="content-lidar" class="grid md:grid-cols-2 gap-12 items-center animate-fade-in">
+                    <div>
+                        <span class="text-blue-600 font-black text-6xl opacity-10 select-none">01</span>
+                        <h2 class="text-3xl font-black text-blue-900 uppercase tracking-tight -mt-4 mb-6">Aerial LiDAR Surveys</h2>
+                        <p class="text-slate-600 mb-6 leading-relaxed">High-precision 3D point clouds and aerial imagery ideal for creating Digital Terrain Models (DTM), Digital Surface Models (DSM), and orthoimagery.</p>
+                        <div class="bg-slate-50 p-6 rounded border-l-4 border-blue-600">
+                            <ul class="space-y-2 text-sm">
+                                <li><strong class="text-blue-900">Technology:</strong> Riegl 780i LiDAR systems with high-density mapping.</li>
+                                <li><strong class="text-blue-900">Applications:</strong> Urban planning, forest monitoring, flood risk.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="h-80 bg-slate-100 rounded overflow-hidden shadow-2xl rotate-1 hover:rotate-0 transition duration-500"><img src="https://images.unsplash.com/photo-1508614589041-895b88991e3e?q=80&w=1000" class="w-full h-full object-cover"></div>
+                </div>
+
+                <!-- 2. Drone Surveying -->
+                <div id="content-drone" class="hidden grid md:grid-cols-2 gap-12 items-center animate-fade-in">
+                    <div>
+                        <span class="text-blue-600 font-black text-6xl opacity-10 select-none">02</span>
+                        <h2 class="text-3xl font-black text-blue-900 uppercase tracking-tight -mt-4 mb-6">Drone & Photogrammetry</h2>
+                        <p class="text-slate-600 mb-6 leading-relaxed">Accurate topographic mapping, volumetric measurements, and slope monitoring. We generate 3D models from aerial images for engineering projects.</p>
+                        <div class="bg-slate-50 p-6 rounded border-l-4 border-blue-600">
+                            <ul class="space-y-2 text-sm">
+                                <li><strong class="text-blue-900">Deliverables:</strong> Orthomosaic maps, 3D textured maps, volumetric reports.</li>
+                                <li><strong class="text-blue-900">Innovation:</strong> AI and machine learning for automated feature extraction.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="h-80 bg-slate-100 rounded overflow-hidden shadow-2xl rotate-1 hover:rotate-0 transition duration-500"><img src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?q=80&w=1000" class="w-full h-full object-cover"></div>
+                </div>
+
+                <!-- 3. GIS Processing -->
+                <div id="content-gis" class="hidden grid md:grid-cols-2 gap-12 items-center animate-fade-in">
+                    <div>
+                        <span class="text-blue-600 font-black text-6xl opacity-10 select-none">03</span>
+                        <h2 class="text-3xl font-black text-blue-900 uppercase tracking-tight -mt-4 mb-6">GIS Data Processing</h2>
+                        <p class="text-slate-600 mb-6 leading-relaxed">Transforming raw geospatial data into actionable insights. Includes raster-to-vector conversion, orthorectification, and geo-referencing.</p>
+                        <div class="bg-slate-50 p-6 rounded border-l-4 border-blue-600">
+                            <ul class="space-y-2 text-sm">
+                                <li><strong class="text-blue-900">Tools:</strong> ArcGIS, QGIS, ERDAS IMAGINE.</li>
+                                <li><strong class="text-blue-900">Processing:</strong> Cloud/haze removal, mosaicking, color balancing.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="h-80 bg-slate-100 rounded overflow-hidden shadow-2xl rotate-1 hover:rotate-0 transition duration-500"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000" class="w-full h-full object-cover"></div>
+                </div>
+
+                <!-- 4. Advanced Analytics -->
+                <div id="content-analytics" class="hidden grid md:grid-cols-2 gap-12 items-center animate-fade-in">
+                    <div>
+                        <span class="text-blue-600 font-black text-6xl opacity-10 select-none">04</span>
+                        <h2 class="text-3xl font-black text-blue-900 uppercase tracking-tight -mt-4 mb-6">Advanced GIS Analytics</h2>
+                        <p class="text-slate-600 mb-6 leading-relaxed">Deep analysis for complex engineering and environmental challenges. We turn maps into mathematical models for cut-fill, benching, and elevation.</p>
+                        <div class="bg-slate-50 p-6 rounded border-l-4 border-blue-600">
+                            <ul class="space-y-2 text-sm">
+                                <li><strong class="text-blue-900">Analyses:</strong> L-Section & X-Section, Cut-Fill & Benching Volume.</li>
+                                <li><strong class="text-blue-900">Modelling:</strong> TIN Modelling & Grid Elevation Models.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="h-80 bg-slate-100 rounded overflow-hidden shadow-2xl rotate-1 hover:rotate-0 transition duration-500"><img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1000" class="w-full h-full object-cover"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 text-slate-500 py-10 text-center border-t border-white/5 text-xs">
+        <p>&copy; 2025 QSGI INTEL SOLUTIONS. ALL RIGHTS RESERVED.</p>
+    </footer>
+
+    <script>
+        function switchTab(id) {
+            // Hide all content
+            ['lidar','drone','gis','analytics'].forEach(t => {
+                document.getElementById('content-'+t).classList.add('hidden');
+                document.getElementById('tab-'+t).classList.remove('active');
+            });
+            // Show selected
+            document.getElementById('content-'+id).classList.remove('hidden');
+            document.getElementById('tab-'+id).classList.add('active');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QSGI | Oil Palm & EUDR</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600;700;900&family=JetBrains+Mono:wght@400;700&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #ffffff; }
+        h1, h2, h3, h4, h5 { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        .hero-gradient { background: linear-gradient(0deg, rgba(15,23,42,1) 0%, rgba(15,23,42,0.6) 100%); }
+        .chart-container { position: relative; height: 200px; width: 100%; }
+    </style>
+</head>
+<body class="bg-white text-slate-900 antialiased">
+
+    <!-- NAVIGATION -->
+    <header class="sticky top-0 bg-white/95 backdrop-blur-xl border-b border-slate-100 z-[100]">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <img src="https://i.ibb.co/DPySg11v/QSGIlogo.jpg" alt="QSGI Logo" class="h-10 w-auto">
+                <span class="text-3xl font-black text-blue-950 tracking-tighter italic group-hover:text-blue-800 transition">QSGI</span>
+            </a>
+            <div class="hidden lg:flex space-x-8 font-bold text-[11px] uppercase tracking-widest text-slate-500">
+                <a href="index.html#about" class="py-2 hover:text-blue-600 transition">About Us</a>
+                <a href="products.html" class="py-2 hover:text-blue-600 transition">Product</a>
+                <a href="technology.html" class="py-2 hover:text-blue-600 transition">Technology</a>
+                <a href="case_studies.html" class="py-2 text-blue-600 border-b-2 border-blue-600 transition">Case Study</a>
+                <a href="contact.html" class="py-2 hover:text-blue-600 transition">Contact Us</a>
+            </div>
+            <a href="contact.html" class="bg-blue-900 text-white px-7 py-2.5 rounded-sm text-[11px] font-black uppercase tracking-widest hover:bg-blue-800 transition shadow-lg shadow-blue-900/20">Contact Us</a>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative min-h-[85vh] py-32 flex items-center bg-slate-950 overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-40 bg-cover bg-center" style="background-image: url('https://i.ibb.co/nNDx83Tx/OILpalmbasemap.png');"></div>
+        <div class="absolute inset-0 hero-gradient z-0"></div>
+        
+        <div class="container mx-auto px-6 relative z-10 text-white">
+            <div class="max-w-5xl">
+                <span class="text-orange-400 font-bold uppercase tracking-[0.3em] text-xs mb-6 inline-block">
+                    Regulatory Compliance | Precision Plantation
+                </span>
+                <h1 class="text-6xl md:text-8xl font-black leading-[1.1] uppercase tracking-tighter mb-10">
+                    Oil Palm <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-300 font-light italic lowercase">EUDR & Yield AI.</span>
+                </h1>
+                <p class="text-xl md:text-3xl font-light italic text-slate-300 max-w-3xl mb-14">
+                    Ensuring European market access through automated deforestation checks and boosting yield with UAV crown segmentation.
+                </p>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-white/20 pt-8">
+                    <div><div class="text-slate-400 text-[10px] font-bold uppercase tracking-widest mb-2">Compliance</div><div class="font-mono text-xl md:text-2xl text-emerald-400">EUDR Ready</div></div>
+                    <div><div class="text-slate-400 text-[10px] font-bold uppercase tracking-widest mb-2">Est. Yield</div><div class="font-mono text-xl md:text-2xl text-slate-200">19.13 t/ha</div></div>
+                    <div><div class="text-slate-400 text-[10px] font-bold uppercase tracking-widest mb-2">Biomass (AGB)</div><div class="font-mono text-xl md:text-2xl">85.0 t/ha</div></div>
+                    <div><div class="text-slate-400 text-[10px] font-bold uppercase tracking-widest mb-2">Health Score</div><div class="font-mono text-xl md:text-2xl text-blue-400">93/100</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EUDR COMPLIANCE -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-4xl font-black text-blue-900 uppercase tracking-tighter mb-6">EU Deforestation Regulation (EUDR)</h2>
+                    <p class="text-slate-600 text-lg mb-6 leading-relaxed">
+                        To export palm oil to the EU, operators must prove their land was not deforested after December 31, 2020. Our engine automates this check.
+                    </p>
+                    <div class="bg-slate-50 p-6 rounded border-l-4 border-emerald-500 mb-6">
+                        <div class="flex items-center gap-4 mb-2">
+                            <i class="fa-solid fa-circle-check text-emerald-500 text-2xl"></i>
+                            <h4 class="font-bold text-emerald-900 text-lg uppercase">Status: COMPLIANT</h4>
+                        </div>
+                        <p class="text-slate-600 text-sm">Analysis of historical Dynamic World data (2018-2024) confirms 0.0 ha of primary forest loss within the delineated boundary post-2020.</p>
+                    </div>
+                    <img src="https://i.ibb.co/9mxwp83T/oilpalm-EUDRchecktimeseries.png" class="w-full rounded shadow-sm border border-slate-100" alt="Time Series">
+                </div>
+                <div>
+                    <div class="bg-white p-2 rounded shadow-2xl border border-slate-200">
+                        <div class="flex justify-between items-center px-4 py-2 border-b border-slate-100 mb-2">
+                            <span class="text-xs font-bold text-slate-600 uppercase tracking-widest">Basemap & Boundaries</span>
+                            <span class="text-[10px] font-mono text-slate-400">AI DELINEATION</span>
+                        </div>
+                        <img src="https://i.ibb.co/nNDx83Tx/OILpalmbasemap.png" alt="Basemap" class="w-full rounded">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BIOMASS & FERTILIZER PRESCRIPTION (NEW SECTION) -->
+    <section class="py-24 bg-slate-50 border-y border-slate-200">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-4xl mx-auto mb-16">
+                <h2 class="text-4xl font-black text-blue-900 uppercase tracking-tighter mb-4">Biomass & Fertilizer Prescription</h2>
+                <p class="text-slate-600">We identified a **2.07 t/ha yield gap** compared to regional potential. Below is the precision nutrient plan to close this gap.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                
+                <!-- Left: Benchmarking -->
+                <div class="bg-white p-8 rounded shadow-lg border border-slate-200">
+                    <h4 class="font-bold text-slate-900 uppercase text-xs tracking-widest mb-6 border-b border-slate-100 pb-2">Productivity Benchmark (AGB)</h4>
+                    <div class="grid grid-cols-3 gap-4 text-center mb-8">
+                        <div><div class="text-2xl font-black text-blue-600">85.04</div><div class="text-[10px] font-bold text-slate-400 uppercase">Your Farm (t/ha)</div></div>
+                        <div><div class="text-2xl font-black text-slate-400">85.75</div><div class="text-[10px] font-bold text-slate-400 uppercase">Regional Avg</div></div>
+                        <div><div class="text-2xl font-black text-emerald-600">94.23</div><div class="text-[10px] font-bold text-slate-400 uppercase">Potential</div></div>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center text-xs font-mono text-slate-600">
+                            <span>Est. Annual Yield</span>
+                            <span class="font-bold">19.13 t/ha/yr</span>
+                        </div>
+                        <div class="flex justify-between items-center text-xs font-mono text-slate-600">
+                            <span>Monthly FFB</span>
+                            <span class="font-bold">1.59 t/ha/mo</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 pt-6 border-t border-slate-100">
+                        <h5 class="text-xs font-bold text-slate-500 uppercase mb-4">Farm Health Breakdown</h5>
+                        <div class="space-y-3">
+                            <div>
+                                <div class="flex justify-between text-[10px] font-bold uppercase text-slate-500 mb-1"><span>Healthy</span><span>76.6%</span></div>
+                                <div class="w-full bg-slate-100 h-1.5 rounded-full"><div class="bg-emerald-500 h-1.5 rounded-full" style="width: 76.6%"></div></div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-[10px] font-bold uppercase text-slate-500 mb-1"><span>Weed Pressure</span><span class="text-orange-500">23.4%</span></div>
+                                <div class="w-full bg-slate-100 h-1.5 rounded-full"><div class="bg-orange-400 h-1.5 rounded-full" style="width: 23.4%"></div></div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-[10px] font-bold uppercase text-slate-500 mb-1"><span>Blank Spots</span><span class="text-red-500">0.05%</span></div>
+                                <div class="w-full bg-slate-100 h-1.5 rounded-full"><div class="bg-red-500 h-1.5 rounded-full" style="width: 0.05%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Fertilizer Plan -->
+                <div class="bg-slate-900 text-white p-8 rounded shadow-lg">
+                    <h4 class="font-bold text-white uppercase text-xs tracking-widest mb-6 border-b border-white/10 pb-2">Fertilizer Inputs to Close Gap</h4>
+                    
+                    <div class="grid grid-cols-3 gap-4 mb-8">
+                        <div class="bg-blue-900/30 border border-blue-500/30 p-4 rounded text-center">
+                            <div class="text-2xl font-black text-blue-400">28</div>
+                            <div class="text-[10px] text-blue-200 uppercase mt-1">Bags Urea</div>
+                        </div>
+                        <div class="bg-orange-900/30 border border-orange-500/30 p-4 rounded text-center">
+                            <div class="text-2xl font-black text-orange-400">6</div>
+                            <div class="text-[10px] text-orange-200 uppercase mt-1">Bags DAP</div>
+                        </div>
+                        <div class="bg-emerald-900/30 border border-emerald-500/30 p-4 rounded text-center">
+                            <div class="text-2xl font-black text-emerald-400">29</div>
+                            <div class="text-[10px] text-emerald-200 uppercase mt-1">Bags MOP</div>
+                        </div>
+                    </div>
+
+                    <h5 class="text-xs font-bold text-slate-400 uppercase mb-4">Variable Rate Application Strategy</h5>
+                    <div class="space-y-4 text-xs font-mono text-slate-300">
+                        <div class="flex items-start gap-3">
+                            <span class="w-3 h-3 rounded-full bg-red-500 mt-1 shrink-0"></span>
+                            <div>
+                                <strong class="text-white block mb-1">Low Productivity Zone (13.9 ha)</strong>
+                                Apply Max Dosage: 14 bags Urea, 3 bags DAP, 14 bags MOP.
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="w-3 h-3 rounded-full bg-orange-500 mt-1 shrink-0"></span>
+                            <div>
+                                <strong class="text-white block mb-1">Medium Productivity Zone (13.5 ha)</strong>
+                                Apply Moderate Dosage: 10 bags Urea, 2 bags DAP, 10 bags MOP.
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="w-3 h-3 rounded-full bg-emerald-500 mt-1 shrink-0"></span>
+                            <div>
+                                <strong class="text-white block mb-1">High Productivity Zone (13.8 ha)</strong>
+                                Apply Min Dosage: 4 bags Urea, 1 bag DAP, 4 bags MOP.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- UAV PRECISION -->
+    <section class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row gap-16 items-center">
+                
+                <div class="md:w-1/2">
+                    <span class="text-emerald-600 font-bold uppercase tracking-[0.2em] text-xs mb-4 inline-block">Next-Gen Precision</span>
+                    <h3 class="text-4xl font-black text-blue-900 uppercase tracking-tighter mb-6">UAV Crown Segmentation.</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-8">
+                        Moving beyond satellite pixels. Our UAV-AI pipeline counts every single tree, measures crown diameter, and detects individual "sick" palms before the infection spreads.
+                    </p>
+                    <ul class="space-y-4 text-xs font-mono text-slate-600">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-crosshairs text-emerald-600"></i> Individual Tree Counting (99% Accuracy)</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-ruler-combined text-emerald-600"></i> Crown Diameter Measurement</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-notes-medical text-emerald-600"></i> Ganoderma/Pest Detection</li>
+                    </ul>
+                </div>
+
+                <div class="md:w-1/2">
+                    <div class="relative group rounded shadow-2xl border border-slate-200 overflow-hidden">
+                        <div class="absolute top-4 left-4 bg-emerald-600 text-white px-3 py-1 text-[10px] font-bold uppercase tracking-widest z-10 shadow-lg">UAV AI Output</div>
+                        <img src="https://i.ibb.co/dzWncvP/plantationcrownsegementation-andproblematicareadelineation.png" class="w-full transition duration-500" alt="UAV Segmentation">
+                    </div>
+                    <p class="text-center text-[10px] text-slate-400 uppercase tracking-widest mt-4">Fig 4.1: Individual Crown Segmentation & Gap Analysis.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 text-slate-500 py-10 text-center border-t border-white/5 text-xs">
+        <p>&copy; 2025 QSGI INTEL SOLUTIONS. ALL RIGHTS RESERVED.</p>
+    </footer>
+
+</body>
+</html>
